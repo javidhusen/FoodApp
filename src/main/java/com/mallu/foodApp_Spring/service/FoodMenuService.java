@@ -40,6 +40,7 @@ public class FoodMenuService {
 		ResponseStructure<FoodMenu> responseStructure = new ResponseStructure<>();
 		FoodMenu foodMenu = foodMenuDao.getFoodMenuById(id);
 		if (foodMenu != null) {
+			foodMenuDao.deleteFoodMenuById(id);
 			responseStructure.setStatus(HttpStatus.OK.value());
 			responseStructure.setMessage("Deleted Successfully");
 			responseStructure.setData(foodMenu);

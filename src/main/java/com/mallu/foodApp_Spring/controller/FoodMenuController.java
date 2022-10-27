@@ -38,7 +38,7 @@ public class FoodMenuController {
 	}
 	
 	@PutMapping
-	public ResponseEntity<ResponseStructure<FoodMenu>> updateFoodMenu(FoodMenu foodMenu){
+	public ResponseEntity<ResponseStructure<FoodMenu>> updateFoodMenu(@RequestBody FoodMenu foodMenu){
 		return foodMenuService.updateFoodMenu(foodMenu);
 	}
 }
